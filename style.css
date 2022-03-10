@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131313;
+}
+
+.first_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.first_loading_animation {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_loading_animation .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: -30px;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    border-top: 4px solid #2fa2ff;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.first_loading_animation .circle::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2fa2ff;
+    box-shadow: 0 0 0 5px #2582cede, 0 0 0 10px #1e6aa8a2, 0 0 0 20px #1340667a, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+}
+
+.first_loading_animation .circle:nth-child(3) {
+    position: absolute;
+    top: -98px;
+}
+
+.first_loading_animation .circle:nth-child(2) {
+    border-top: 4px solid #2fff2f;
+}
+
+.first_loading_animation .circle:nth-child(2)::before {
+    background-color: #2fff2f;
+    box-shadow: 0 0 0 5px #27d427d3, 0 0 0 10px #1b941b9d, 0 0 0 20px #115d1165, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+}
+
+.first_loading_animation .circle:nth-child(2) {
+    animation: animate2 3s linear infinite;
+}
+
+@keyframes animate2{
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.first_loading_animation .circle:nth-child(3) {
+    border-top: 4px solid #fffc2f;
+}
+
+.first_loading_animation .circle:nth-child(3)::before {
+    background-color: #fffc2f;
+    box-shadow: 0 0 0 5px #d4d227de, 0 0 0 10px #a09d1ea2, 0 0 0 20px #66651362, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+}
+
+.first_loading_animation .circle:nth-child(3) {
+    animation: animate3 3s linear infinite;
+}
+
+@keyframes animate3{
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.first_loading_animation p {
+    position: absolute;
+    color: #f0efef;
+    font-size: 2em;
+    font-weight: 400;
+    bottom: -150px;
+}
