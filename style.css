@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display+SC:wght@400;700&family=Syne+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Syne Mono', monospace;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #131313;
 }
 
+a {
+    color: #f1f1f1;
+}
+
+a:visited {
+    color: #f1f1f1;
+}
+
+/* ---- FIRST DESIGN ----- LOADING IDEA ----- */
+
 .first_section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
+    margin-top: 5rem;
 }
 
 .first_loading_animation {
@@ -27,7 +44,7 @@ body {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: -30px;
+    margin: -100px;
     border: 4px solid transparent;
     border-radius: 50%;
     border-top: 4px solid #2fa2ff;
@@ -65,6 +82,8 @@ body {
 }
 
 .first_loading_animation .circle:nth-child(2)::before {
+    top: 17px;
+    right: 150px;
     background-color: #2fff2f;
     box-shadow: 0 0 0 5px #27d427d3, 0 0 0 10px #1b941b9d, 0 0 0 20px #115d1165, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
 }
@@ -104,10 +123,108 @@ body {
     }
 }
 
-.first_loading_animation p {
+.first_button_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+}
+
+.first_button {
+    position: relative;
+    background-color: transparent;
+    color: #f1f1f1;
+    font-size: 25px;
+    letter-spacing: .4rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    height: 80px;
+    width: 400px;
+    border-radius: 30px;
+    border: 2px solid #131313;
+    cursor: pointer;
+}
+
+.first_button::before, .first_button::after {
     position: absolute;
-    color: #f0efef;
-    font-size: 2em;
-    font-weight: 400;
-    bottom: -150px;
+    content: "";
+    background-color: #2fa2ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -9px;
+    left: 8px;
+    box-shadow: 0 0 0 4px #2582cede, 0 0 0 8px #1e6aa8a2, 0 0 0 15px #1340667a, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+}
+
+/* ---- SECOND DESIGN ----- LOADING IDEA ----- */
+
+#second_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.scan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scan .fingerprint {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url(./images/fingerprint.png);
+    background-size: 300px;
+}
+
+.scan .fingerprint::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/fingerprint_blue.png);
+    background-size: 300px;
+    animation: animate4 4s ease-in-out infinite;
+}
+
+@keyframes animate4 {
+    0%, 100% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+}
+
+h3 {
+    margin-top: 5rem;
+    color: #7dbee4;
+    font-size: 28px;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+/* ---- SCROLL TO TOP ----- */
+
+.scroll_to_top {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  bottom: 120px;
+  right: 70px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #f1f1f1;
+  font-size: 25px;
+  border-radius: 30px;
+  border: 1px solid #f1f1f1;
 }
