@@ -44,7 +44,7 @@ a:visited {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: -100px;
+    margin: -60px;
     border: 4px solid transparent;
     border-radius: 50%;
     border-top: 4px solid #2fa2ff;
@@ -157,7 +157,7 @@ a:visited {
     box-shadow: 0 0 0 4px #2582cede, 0 0 0 8px #1e6aa8a2, 0 0 0 15px #1340667a, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
 }
 
-/* ---- SECOND DESIGN ----- LOADING IDEA ----- */
+/* ---- SECOND DESIGN ----- FINGERPRINT SCAN ----- */
 
 #second_section {
     display: flex;
@@ -204,11 +204,128 @@ a:visited {
 }
 
 h3 {
-    margin-top: 5rem;
+    margin-top: 10rem;
     color: #7dbee4;
     font-size: 28px;
     letter-spacing: .2rem;
     font-weight: 500;
+}
+
+.second_button {
+    position: relative;
+    background-color: transparent;
+    color: #f1f1f1;
+    font-size: 25px;
+    letter-spacing: .4rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    height: 80px;
+    width: 400px;
+    border-radius: 30px;
+    border: 2px dashed #131313;
+    cursor: pointer;
+}
+
+/* ---- THIRD DESIGN ----- FLOATING GHOST ----- */
+
+#third_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ghost {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background-color: #e0dfdf;
+    border-radius: 80px 80px 0 0;
+    cursor: pointer;
+}
+
+.face {
+    position: absolute;
+    width: 140px;
+    top: 60px;
+    left: calc(60% - 80px);
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 14px;
+}
+
+.eyes span {
+    width: 30px;
+    height: 30px;
+    background-color: #131313;
+    border-radius: 60px 60px 0 0;
+    transition: .3s linear;
+}
+
+.ghost:hover .eyes span {
+    height: 18px;
+}
+
+.mouth {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    margin-left: 45px;
+    margin-top: 17px;
+    background-color: #131313;
+    border-radius: 0 0 20px 20px;
+    transition: .3s linear;
+}
+
+.ghost:hover .mouth {
+    height: 28px;
+}
+
+.hands {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 215px;
+    margin-top: 20px;
+    left: -20px;
+    top: 80px;
+}
+
+.hands span {
+    background-color: #e0dfdf;
+    width: 28px;
+    height: 34px;
+}
+
+.hands span:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+.hands span:last-child {
+    margin-left: 60px;
+    border-radius: 0 20px 20px 0;
+}
+
+.feets {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin-top: 185px;
+}
+
+.feets span {
+    background-color: #e0dfdf;
+    width: 43px;
+    height: 30px;
+    border-radius: 0 0 20px 20px;
 }
 
 /* ---- SCROLL TO TOP ----- */
@@ -219,7 +336,7 @@ h3 {
   height: 55px;
   background: transparent;
   bottom: 120px;
-  right: 70px;
+  right: 100px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;
