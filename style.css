@@ -328,6 +328,143 @@ h3 {
     border-radius: 0 0 20px 20px;
 }
 
+.third_button {
+    background-color: transparent;
+    color: #f1f1f1;
+    font-size: 25px;
+    letter-spacing: .4rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    height: 3rem;
+    width: 400px;
+    margin-top: 8rem;
+    border-radius: 30px;
+    border: 2px dashed #131313;
+    cursor: pointer;
+}
+
+/* -------- FOURTH SECTION --------------------- */
+
+#fourth_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 99.2vw;
+    background: url(./images/4th-section_bg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.fourth_section_ul {
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+.fourth_section_ul li {
+    position: relative;
+    list-style: none;
+    width: 300px;
+    color: white;
+    background: #686867;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(9px);
+    height: 4.5rem;
+    padding: 20px 30px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+
+.fourth_section_ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #f7f6f3;
+    background-color: rgba(192, 189, 189, 0.377);
+    border: 0px 1px solid rgba(255, 255, 255, 0.281);
+    backdrop-filter: blur(15px);
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+.fourth_section_ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: -40px;
+    left: -20.5px;
+    background: #f7f6f3;
+    background-color: rgba(200, 200, 200, 0.26);
+    border: 0px 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transform-origin: right;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.fourth_section_ul li:hover {
+    font-size: 25px;
+    transform: translateX(-50px);
+}
+
+.fourth_button_section {
+    position: relative;
+    margin-left: 20rem;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 22px;
+    background: #686867;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(9px);
+    transform: skewY(10deg);
+    cursor: pointer;
+}
+
+.fourth_button_section::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 100%;
+    bottom: 19px;
+    right: -43px;
+    background: #686867;
+    background-color: rgba(200, 200, 200, 0.288);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(9px);
+    transform: skewY(-45deg);
+    transition: 0.5s;
+}
+
+.fourth_button_section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    bottom: 99.5px;
+    right: -23px;
+    background: #686867;
+    background-color: rgba(200, 200, 200, 0.288);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(9px);
+    transform: skewX(-45deg);
+    transition: 0.5s;
+}
+
+.fourth_button_section:hover {
+    font-size: 28px;
+}
+
+
+
 /* ---- SCROLL TO TOP ----- */
 
 .scroll_to_top {
