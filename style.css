@@ -410,7 +410,7 @@ h3 {
 }
 
 .fourth_section_ul li:hover {
-    font-size: 25px;
+    font-size: 30px;
     transform: translateX(-50px);
 }
 
@@ -463,6 +463,67 @@ h3 {
     font-size: 28px;
 }
 
+/* -------- FIFTH SECTION --------------------- */
+#fifth_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loader {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loader span:nth-child(1) {
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 0.25px solid rgba(255, 255, 255, 0.4);
+    border-left: 0.25px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(9px);
+    z-index: 2;
+}
+
+.loader span:nth-child(2) {
+    position: absolute;
+    background: rgb(250, 176, 219);
+    animation: animate51 5s ease-in-out infinite;
+}
+
+.loader span:nth-child(3) {
+    position: absolute;
+    background: rgb(153, 255, 245);
+    animation: animate51 5s ease-in-out infinite;
+    animation-delay: -2s;
+    border-radius: 0;
+}
+
+@keyframes animate51 {
+    0% {
+        transform: translate(-250px, 50px) scale(0.3) rotate(0deg);
+        z-index: 1;
+    }
+    50% {
+        transform: translate(250px, -50px) scale(0.3) rotate(180deg);
+        z-index: 1;
+    }
+    50.00001% {
+        transform: translate(250px, -50px) scale(0.3) rotate(180deg);
+        z-index: 3;
+    }
+    100% {
+        transform: translate(-250px, 50px) scale(0.3) rotate(360deg);
+        z-index: 3;
+    }
+}
 
 
 /* ---- SCROLL TO TOP ----- */
