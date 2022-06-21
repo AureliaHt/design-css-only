@@ -27,134 +27,96 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     min-height: 100vh;
-    margin-top: 5rem;
+    background-color: #000000;
 }
 
-.first_loading_animation {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+video {
+    object-fit: cover;
 }
 
-.first_loading_animation .circle {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: -60px;
-    border: 4px solid transparent;
-    border-radius: 50%;
-    border-top: 4px solid #2fa2ff;
-    animation: animate 3s linear infinite;
-}
-
-@keyframes animate{
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.first_loading_animation .circle::before {
-    content: "";
+h1 {
     position: absolute;
-    top: 17px;
-    right: 16px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #2fa2ff;
-    box-shadow: 0 0 0 5px #2582cede, 0 0 0 10px #1e6aa8a2, 0 0 0 20px #1340667a, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+    font-size: 4em;
+    color: #686867;
+    letter-spacing: 0.2px;
 }
 
-.first_loading_animation .circle:nth-child(3) {
-    position: absolute;
-    top: -98px;
+h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: animate1 1s linear forwards;
 }
 
-.first_loading_animation .circle:nth-child(2) {
-    border-top: 4px solid #2fff2f;
-}
-
-.first_loading_animation .circle:nth-child(2)::before {
-    top: 17px;
-    right: 150px;
-    background-color: #2fff2f;
-    box-shadow: 0 0 0 5px #27d427d3, 0 0 0 10px #1b941b9d, 0 0 0 20px #115d1165, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
-}
-
-.first_loading_animation .circle:nth-child(2) {
-    animation: animate2 3s linear infinite;
-}
-
-@keyframes animate2{
-    0% {
-        transform: rotate(360deg);
+@keyframes animate1 {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
     }
-    100% {
-        transform: rotate(0deg);
+    100%{
+        opacity: 1;
     }
 }
 
-.first_loading_animation .circle:nth-child(3) {
-    border-top: 4px solid #fffc2f;
+h1 span:nth-child(1){
+    animation-delay: 0.75s;
 }
 
-.first_loading_animation .circle:nth-child(3)::before {
-    background-color: #fffc2f;
-    box-shadow: 0 0 0 5px #d4d227de, 0 0 0 10px #a09d1ea2, 0 0 0 20px #66651362, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+h1 span:nth-child(2){
+    animation-delay: 1s;
 }
 
-.first_loading_animation .circle:nth-child(3) {
-    animation: animate3 3s linear infinite;
+h1 span:nth-child(3){
+    animation-delay: 1.5s;
 }
 
-@keyframes animate3{
-    0% {
-        transform: rotate(-180deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
+h1 span:nth-child(4){
+    animation-delay: 2s;
 }
 
-.first_button_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15rem;
+h1 span:nth-child(5){
+    animation-delay: 2.25s;
 }
 
-.first_button {
-    position: relative;
-    background-color: transparent;
-    color: #f1f1f1;
-    font-size: 25px;
-    letter-spacing: .4rem;
-    font-weight: 500;
-    padding: 20px 40px;
-    height: 80px;
-    width: 400px;
-    border-radius: 30px;
-    border: 2px solid #131313;
-    cursor: pointer;
+h1 span:nth-child(6){
+    animation-delay: 2.5s;
 }
 
-.first_button::before, .first_button::after {
-    position: absolute;
-    content: "";
-    background-color: #2fa2ff;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: -9px;
-    left: 8px;
-    box-shadow: 0 0 0 4px #2582cede, 0 0 0 8px #1e6aa8a2, 0 0 0 15px #1340667a, 0 0 20px #2fa2ff, 0 0 50px #2fa2ff;
+h1 span:nth-child(7){
+    animation-delay: 2.75s;
+}
+
+h1 span:nth-child(8){
+    animation-delay: 3s;
+}
+
+h1 span:nth-child(9){
+    animation-delay: 3.5s;
+}
+
+h1 span:nth-child(10){
+    animation-delay: 3.75s;
+}
+
+h1 span:nth-child(11){
+    animation-delay: 4s;
+}
+
+h1 span:nth-child(12){
+    animation-delay: 4.5s;
+}
+
+h1 span:nth-child(13){
+    animation-delay: 4.75s;
+}
+
+h1 span:nth-child(14){
+    animation-delay: 5s;
+}
+
+h1 span:nth-child(15){
+    animation-delay: 5.6s;
 }
 
 /* ---- SECOND DESIGN ----- FINGERPRINT SCAN ----- */
@@ -506,6 +468,18 @@ h3 {
     border-radius: 0;
 }
 
+.loader span:nth-child(4) {
+    position: absolute;
+    height : 0;
+    width : 0;
+    border: 0 solid transparent;
+    border-right : 162px solid transparent;
+    border-bottom : 280px solid rgb(255, 246, 113);
+    border-left : 162px solid transparent;
+    animation: animate52 4.5s ease-in-out infinite;
+    border-radius: 0;
+}
+
 @keyframes animate51 {
     0% {
         transform: translate(-250px, 50px) scale(0.3) rotate(0deg);
@@ -521,6 +495,25 @@ h3 {
     }
     100% {
         transform: translate(-250px, 50px) scale(0.3) rotate(360deg);
+        z-index: 3;
+    }
+}
+
+@keyframes animate52 {
+    0% {
+        transform: translate(50px, -250px) scale(0.3) rotate(0deg);
+        z-index: 1;
+    }
+    50% {
+        transform: translate(-50px, 250px) scale(0.3) rotate(180deg);
+        z-index: 1;
+    }
+    50.00001% {
+        transform: translate(-50px, 250px) scale(0.3) rotate(180deg);
+        z-index: 3;
+    }
+    100% {
+        transform: translate(50px, -250px) scale(0.3) rotate(360deg);
         z-index: 3;
     }
 }
